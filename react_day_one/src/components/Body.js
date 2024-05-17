@@ -24,9 +24,11 @@ export default function Body(){
     return(
         <div className= "container">
 
-            <button className = 'button' onClick={() => getPokemonData()}>RANDOM POKEMON GENERATOR!!</button>
-            <div style={{marginTop: '10px'}}>Pokemon: {pokemonData ? pokemonData.name : ''}</div>
-            <img className = 'pokemonImage' src={pokemonData && pokemonData.sprites && pokemonData.sprites.front_default ? pokemonData.sprites.front_default : ''} alt="pokemon image" />
+            <button className = 'button' onClick={() => getPokemonData()}>Click Here to Generage a Random Pokemon!!</button>
+            <div className='pokemonGenerator'>
+              <div style={{marginTop: '10px'}}>Pokemon: {pokemonData ? pokemonData.name : ''}</div>
+              <img className = 'pokemonImage' src={pokemonData && pokemonData.sprites && pokemonData.sprites.front_default ? pokemonData.sprites.front_default : ''} alt="pokemon image" />
+            </div>
 
         </div>
     )
